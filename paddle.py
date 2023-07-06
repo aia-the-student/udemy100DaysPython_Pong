@@ -1,6 +1,10 @@
 from turtle import Turtle
 
-class Paddle():
+UP = 90
+DOWN = 270
+
+
+class Paddle:
 
     def __init__(self):
         self.paddle = []
@@ -21,5 +25,14 @@ class Paddle():
                 trt.setpos(x=x, y=-40+i*20)
                 self.paddle.append(trt)
 
-    def move(self, dir_flag):
+    def move(self, direction):
+        heading = 0
+        if str(direction).lower() == 'up':
+            heading = UP
+        if str(direction).lower() == 'down':
+            heading = DOWN
 
+        if heading in (UP, DOWN):
+            for trt in self.paddle:
+                trt.setheading(heading)
+                trt.forward(20)
