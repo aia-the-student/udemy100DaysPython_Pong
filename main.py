@@ -26,7 +26,7 @@ game_is_on = True
 screen.update()
 
 while game_is_on:
-    sleep(0.2)
+    sleep(ball.move_speed)
     ball.move()
 
     if abs(ball.ycor()) > 280:
