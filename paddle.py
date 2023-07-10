@@ -22,7 +22,7 @@ class Paddle(Turtle):
     def up(self):
         y = self.pos()[1]
         self.sety(y=y+20)
+
     def down(self):
         y = self.pos()[1]
         self.sety(y=y-20)
-
